@@ -1,0 +1,15 @@
+<%- include("partials/header_tweets")  %> 
+<main>
+    <section class="info-container">
+        <h2>Edit Tweet</h2>
+        <form action="/tweets/<%= tweet.id %>?_method=patch" method="post">
+            <section class="tweet-container">
+                <textarea name="tweet" id="" cols="30" rows="3">
+                    <%= tweet.tweet %> 
+                </textarea>
+            </section>
+            <button class="cta">Save</button>
+        </form>
+    </section>
+</main>
+<%- include("partials/footer")  %> 

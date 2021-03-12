@@ -1,0 +1,19 @@
+<%- include("partials/header_tweets") %>
+    <main>
+        <section class="info-container">
+            <h2>
+                <%= tweet.tweet %> - <b>
+                        <%= tweet.username %>
+                    </b>
+            </h2>
+            <p>Tweet ID : <%= tweet.id %>
+            </p>
+            <div class="links-container">
+                <a class="cta" href="/tweets/<%= tweet.id %>/edit">Edit Tweet</a>
+            </div>
+            <form class="delete-form" action="/tweets/<%= tweet.id %>?_method=delete" method="post" >
+                <button class="cta">Delete Tweet</button>
+            </form>
+        </section>
+    </main>
+    <%- include("partials/footer") %>

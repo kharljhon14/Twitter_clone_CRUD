@@ -1,0 +1,17 @@
+<%- include("partials/header_tweets") %>
+    <main>
+        <section class="info-container">
+            <h2>Raven Tweets</h2>
+            <ul class="tweets">
+                <% for(let t of tweets) { %>
+                    <li>
+                        <%= t.tweet %> - <b>
+                                <%= t.username %>
+                            </b>
+                            <a href="/tweets/<%= t.id %>">details</a>
+                    </li>
+                    <% }%>
+            </ul>
+        </section>
+    </main>
+    <%- include("partials/footer") %>

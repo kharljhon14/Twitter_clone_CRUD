@@ -1,0 +1,19 @@
+<%- include("partials/header_tweets")  %> 
+    <main>
+        <section class="info-container">
+            <h2>Create new Tweet</h2>
+            <form action="/tweets" method="post" class="new-tweet-form">
+                <section class="username-container">
+                    <label for="username">Username :</label>
+                    <input type="text" name="username" id="username">
+                </section>
+               <section class="tweet-container">
+                   <label for="tweet">Tweet</label>
+                   <br>
+                   <textarea name="tweet" id="tweet" cols="30" rows="3"></textarea>
+               </section>
+               <button class="cta">Submit</button>
+            </form>
+        </section>
+    </main>
+<%- include("partials/footer") %>
